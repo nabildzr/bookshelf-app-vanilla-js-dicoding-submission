@@ -1,0 +1,145 @@
+
+:root {
+  --border-radius: 20px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+header {
+  display: flex;
+  padding: 0px 20px;
+  background-color: #1a851d;
+  margin-bottom: 20px;
+
+}
+
+header a {
+  text-decoration: none;
+  color: white;
+
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+.belumSelesai h2, .sudahSelesai h2 {
+  color: black;
+}
+
+main {
+  justify-content: center;
+  display: flex;
+  padding: 0px 40px 10px 40px;
+  gap: 20px;
+}
+
+main section:nth-child(1),
+.cariBuku {
+  border-radius: 20px;
+  background-color: #d3d3d3;
+  padding: 10px;
+}
+
+.belumSelesai,
+.sudahSelesai {
+  background-color: #ffffff;
+  border-radius: var(--border-radius);
+  padding: 10px;
+}
+
+button {
+  background-color: #249e28;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: var(--border-radius);
+  box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border-color: #249e28;
+  outline: none;
+}
+
+.bookItemActions {
+  display: flex;
+  gap: 5px;
+}
+
+
+[data-bookid] {
+  background-color: #ccc;
+  padding: 10px;
+  border-radius: var(--border-radius);
+  margin-bottom: 10px;
+}
+
+#bookFormSubmit span {
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  main {
+    flex-direction: column;
+    padding: 0 20px 10px 20px;
+  }
+
+  main section:nth-child(1) {
+    width: 100%;
+  }
+
+  .bookItemActions {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  button {
+    width: 100%;
+    padding: 10px;
+  }
+
+  input[type="text"],
+  input[type="number"],
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+  }
+}
+
